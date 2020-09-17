@@ -169,15 +169,11 @@ function endGame() {
 
   displayQuestionsEl.append(endContainer);
 
-  submitBtn.addEventListener("click", goScores);
   
   
 
 }
 
-function (goScores) {
-  console.log(WORK BITCH);
-}
 
 
 
