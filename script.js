@@ -60,7 +60,7 @@ function showTimer() {
 //function that handles and displays the next question
 function nextQuestion() {
 
-  if (index >= questions.length || timer < 1 ) {
+  if (index >= questions.length || timer < 1) {
     endGame();
 
   }
@@ -147,7 +147,18 @@ function endGame() {
   var initials = displayQuestionsEl.textContent = document.createElement("input");
 
   //create a button to submit
-  var submitBtn = displayQuestionsEl.textContent = document.createElement("button")
+  var submitBtn = displayQuestionsEl.textContent = document.createElement("input")
+  
+  submitBtn.setAttribute("type", "submit");
+
+  submitBtn.setAttribute("value", "Submit");
+
+  submitBtn.addEventListener("click", function(){
+    localStorage.setItem("key", initials.value + "" + score.value);
+  });
+
+
+  
 
   //add text to final score <p> tag
   score.textContent = "Your score is " + timer;
@@ -159,8 +170,8 @@ function endGame() {
   submitBtn.textContent = "Submit";
 
 
-   //create a div element to wrap the choices
-   var endContainer = document.createElement("div");
+  //create a div element to wrap the choices
+  var endContainer = document.createElement("div");
 
 
   //append the variables to the question container element
@@ -169,8 +180,9 @@ function endGame() {
 
   displayQuestionsEl.append(endContainer);
 
-  
-  
+
+
+
 
 }
 
