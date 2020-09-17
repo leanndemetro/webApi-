@@ -168,7 +168,15 @@ function endGame() {
 
 
   displayQuestionsEl.append(endContainer);
+
+  
+  
+
 }
+
+
+
+
 
 
 
